@@ -4,11 +4,12 @@
 
 ## 食用方法
 
-- 点击右上角绿色的`Clone or download`按钮，`Download ZIP`, 解压文件。
+- 点击右上角绿色的`Code`按钮，`Download ZIP`, 解压文件。
 - 重命名文件夹为`KirinShiKi`。
 - 将`KirinShiKi`文件夹上传至 typecho 的插件`usr/plugins`目录。
 - 登录后台启用`KirinShiKi`插件即可正确食用。
 
+## handsome 8.3以下的用户，[请点击下载3.0.1版本](https://github.com/Sanakey/KirinShiKi/tree/old)
 ## 更新
 
 ### 3.0.2
@@ -57,4 +58,5 @@
 
 ## 感谢
 
-[神代綺凜](https://moe.best)
+- [神代綺凜](https://moe.best)
+- [Raoby](https://raoby.com/)
