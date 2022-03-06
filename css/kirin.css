@@ -263,11 +263,11 @@ html.theme-dark .app:before {
 }
 
 @media screen and (min-width:992px) {
-    aside.col.w-md.b-l {
+    aside.col.w-md {
         background-color: rgba(255, 255, 255, .9)
     }
 
-    aside.col.w-md.b-l:hover {
+    aside.col.w-md:hover {
         background-color: #fff
     }
 }
