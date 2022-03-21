@@ -725,6 +725,13 @@ img[mw400] {
     }
 }
 
+@media screen and (min-width: 1920px){
+    #post-panel>div.wrapper-md>div.blog-post>.panel .index-post-img+.post-meta {
+        margin-top: -355px;
+    }
+}
+
+
 header.bg-light.wrapper-md {
     margin-top: 30px;
     background-color: transparent !important;
