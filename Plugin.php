@@ -116,6 +116,20 @@ class KirinShiKi_Plugin implements Typecho_Plugin_Interface
             _t('右下角版权样式')
         );
         $form->addInput($copyrightType);
+        
+        // 选择使用的handsome.min.css
+        $selectOldStyle = new Typecho_Widget_Helper_Form_Element_Radio(
+            'selectOldStyle',
+            array(
+                '0' => _t('老版样式'),
+                '1' => _t('新版样式'),
+                ),
+                '1',
+                _t('是否使用了旧的handsome.min.css文件'),
+                _t('如果您手动将handsome.min.css替换为了旧版的css（也就是在公告中给出的版本）请选择老版样式'),
+                _t('如您升级到了handsome v8.4.1 版本后没有进行任何样式修改便无需修改这一选项')
+            );
+        $form->addInput($selectOldStyle);
 
         // 是否启用了pjax
         $pjax = new Typecho_Widget_Helper_Form_Element_Radio(
@@ -157,9 +171,15 @@ class KirinShiKi_Plugin implements Typecho_Plugin_Interface
         $moeTitle = $options->plugin('KirinShiKi')->moeTitle;
         $copyTips = $options->plugin('KirinShiKi')->copyTips;
         $copyrightType = $options->plugin('KirinShiKi')->copyrightType;
+        $selectOldStyle = $options->plugin('KirinShiKi')->selectOldStyle;
         // 输出css文件
         $path = $options->pluginUrl . '/KirinShiKi/';
-        echo '<link rel="stylesheet" type="text/css" href="' . $path . 'css/kirin.css" />';
+        if($selectOldStyle){
+            echo '<link rel="stylesheet" type="text/css" href="' . $path . 'css/kirin.css" />';
+        }else{
+            echo '<link rel="stylesheet" type="text/css" href="' . $path . 'css/kirin.old.css" />';
+        }
+        
         //  输出js文件
         $src = $options->pluginUrl . '/KirinShiKi/js/kirin.js';
         echo "<script src='$src'></script>";
